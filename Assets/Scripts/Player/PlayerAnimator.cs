@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class PlayerAnimator : MonoBehaviour
 {
-    //References
     Animator animator;
     PlayerMovement player_movement;
     SpriteRenderer sprite_renderer;
+
+    private Vector2 last_move_dir;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         player_movement = GetComponent<PlayerMovement>();
         sprite_renderer = GetComponent<SpriteRenderer>();
+        last_move_dir = Vector2.down;
     }
 
     void Update()
@@ -21,16 +23,19 @@ public class PlayerAnimator : MonoBehaviour
         if (player_movement.move_dir.x != 0 || player_movement.move_dir.y != 0)
         {
             animator.SetBool("Move", true);
-            SpriteDirectionChecker();
+            last_move_dir = player_movement.move_dir;
+            SpriteDirectionChecker(player_movement.move_dir);
         }
-        else {
+        else
+        {
             animator.SetBool("Move", false);
+            SpriteDirectionChecker(last_move_dir);
         }
     }
 
-    void SpriteDirectionChecker()
+    void SpriteDirectionChecker(Vector2 direction)
     {
-        animator.SetFloat("Horizontal", player_movement.move_dir.x);
-        animator.SetFloat("Vertical", player_movement.move_dir.y);
+        animator.SetFloat("Horizontal", direction.x);
+        animator.SetFloat("Vertical", direction.y);
     }
 }
