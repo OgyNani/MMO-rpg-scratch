@@ -20,17 +20,20 @@ public class PlayerAnimator : MonoBehaviour
 
     void Update()
     {
+        Vector2 mouse_position = Camera.main.ScreenToWorldPoint(Input.mousePosition); // ѕолучаем позицию мыши в мировых координатах
+        Vector2 direction_to_mouse = (mouse_position - (Vector2)transform.position).normalized; // ¬ектор направлени€ от персонажа до мыши
+
         if (player_movement.move_dir.x != 0 || player_movement.move_dir.y != 0)
         {
             animator.SetBool("Move", true);
-            last_move_dir = player_movement.move_dir;
-            SpriteDirectionChecker(player_movement.move_dir);
+            last_move_dir = direction_to_mouse; // Ќаправление беретс€ из позиции мышки
         }
         else
         {
             animator.SetBool("Move", false);
-            SpriteDirectionChecker(last_move_dir);
         }
+
+        SpriteDirectionChecker(direction_to_mouse); // »спользуем направление на мышь дл€ обновлени€ анимации
     }
 
     void SpriteDirectionChecker(Vector2 direction)
