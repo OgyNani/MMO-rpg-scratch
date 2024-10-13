@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
     public float move_speed;
-    Rigidbody2D rb;
+    private Rigidbody2D rb;
     [HideInInspector]
     public Vector2 move_dir;
 
@@ -14,26 +15,18 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update() //Frame rate dependent
+    public void OnMove(InputAction.CallbackContext context)
     {
-        InputManage();
+        move_dir = context.ReadValue<Vector2>().normalized;
     }
 
-    void FixedUpdate() //Frame rate independent
+    void FixedUpdate()
     {
         Move();
     }
 
-    void InputManage()
-    {
-        float move_x = Input.GetAxisRaw("Horizontal");
-        float move_y = Input.GetAxisRaw("Vertical");
-
-        move_dir = new Vector2 (move_x, move_y).normalized;
-    }
-
     void Move()
     {
-        rb.velocity = new Vector2(move_dir.x * move_speed, move_dir.y * move_speed);
+        rb.velocity = move_dir * move_speed;
     }
 }
