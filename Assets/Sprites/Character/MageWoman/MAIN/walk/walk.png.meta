@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 053ad5cea829869499a12121a24bc94d
+guid: ed169d0a9c7319042bd287e44d4f56b0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,11 +123,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: walk_mage_woman_0
+      name: walk_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 272
+        x: 30
+        y: 273
         width: 26
         height: 24
       alignment: 0
@@ -137,18 +137,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9252ce71f0ba5c478e8acb1c801ca20
-      internalID: 1268287061
+      spriteID: 0822545f392ff344487a42a49246a46d
+      internalID: -1304699650
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_mage_woman_1
+      name: walk_1
       rect:
         serializedVersion: 2
-        x: 47
-        y: 272
+        x: 110
+        y: 273
         width: 26
         height: 23
       alignment: 0
@@ -158,18 +158,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09039ea48d732704cafe395a7deae52f
-      internalID: 1028490403
+      spriteID: d7e365ab3313f98418dc897add088f98
+      internalID: -1766827430
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_mage_woman_2
+      name: walk_2
       rect:
         serializedVersion: 2
-        x: 76
-        y: 272
+        x: 190
+        y: 273
         width: 26
         height: 23
       alignment: 0
@@ -179,18 +179,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c9fc047c0590eb4ba837be03859a237
-      internalID: -1721352807
+      spriteID: 782fb63024d3f9e4eb6851d4a3ad9643
+      internalID: 681112197
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_mage_woman_3
+      name: walk_3
       rect:
         serializedVersion: 2
-        x: 106
-        y: 272
+        x: 269
+        y: 273
         width: 26
         height: 24
       alignment: 0
@@ -200,18 +200,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9f2626a455eb4c439504db3653139ef
-      internalID: 2031755450
+      spriteID: 38fd20ee9911ecf438780fa22bed97fd
+      internalID: 800264659
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_mage_woman_4
+      name: walk_4
       rect:
         serializedVersion: 2
-        x: 135
-        y: 272
+        x: 351
+        y: 273
         width: 26
         height: 24
       alignment: 0
@@ -221,18 +221,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3da55465292f744fa855e8c81dec619
-      internalID: 2038957802
+      spriteID: 2337fe73e3c103c49913ceac61becad4
+      internalID: 132448271
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_mage_woman_5
+      name: walk_5
       rect:
         serializedVersion: 2
-        x: 166
-        y: 272
+        x: 431
+        y: 273
         width: 26
         height: 23
       alignment: 0
@@ -242,18 +242,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a3d06298fa69e941a1b4ddaf8088171
-      internalID: -382697153
+      spriteID: ccde395ed843fb545a1d78b2ebaa5c42
+      internalID: -238155802
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_mage_woman_6
+      name: walk_6
       rect:
         serializedVersion: 2
-        x: 196
-        y: 272
+        x: 512
+        y: 273
         width: 26
         height: 23
       alignment: 0
@@ -263,18 +263,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f851dd1a7aec9842abc07ebb164c8ee
-      internalID: 536663173
+      spriteID: fe80d8acb7bf0184f85d1506405f4582
+      internalID: -223249521
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_mage_woman_7
+      name: walk_7
       rect:
         serializedVersion: 2
-        x: 226
-        y: 272
+        x: 590
+        y: 273
         width: 26
         height: 24
       alignment: 0
@@ -284,18 +284,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 283902c3d44faef4aa32b993b20249f3
-      internalID: 939980134
+      spriteID: 9b51fc292473fae41af9689d58e090b4
+      internalID: 1671160343
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_mage_woman_8
+      name: walk_8
       rect:
         serializedVersion: 2
-        x: 17
-        y: 242
+        x: 30
+        y: 193
         width: 26
         height: 23
       alignment: 0
@@ -305,18 +305,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a228183e0ab7c8e48ba5b9894fbb1bf8
-      internalID: 667119694
+      spriteID: ca0ca603dcf7c1444a45c4aee5cd69d1
+      internalID: 2032422171
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_mage_woman_9
+      name: walk_9
       rect:
         serializedVersion: 2
-        x: 48
-        y: 242
+        x: 110
+        y: 193
         width: 26
         height: 22
       alignment: 0
@@ -326,18 +326,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e06e36d527a70e47a5ee3152d66c24f
-      internalID: -1026683004
+      spriteID: 7f9c2fd61508a8848bad9cb743ae0951
+      internalID: 1889949718
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_mage_woman_10
+      name: walk_10
       rect:
         serializedVersion: 2
-        x: 78
-        y: 242
+        x: 191
+        y: 193
         width: 26
         height: 22
       alignment: 0
@@ -347,39 +347,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 138beb45ba208924f8ec2ddd6fca49f8
-      internalID: -1379681045
+      spriteID: e3e010b9c34363c44a39f69c73fae0ec
+      internalID: -304343735
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_mage_woman_11
+      name: walk_11
       rect:
         serializedVersion: 2
-        x: 107
-        y: 242
-        width: 26
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ba7c6813aad58b042a02ce4d9b7f7067
-      internalID: 626417854
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_mage_woman_12
-      rect:
-        serializedVersion: 2
-        x: 137
-        y: 242
+        x: 270
+        y: 193
         width: 26
         height: 23
       alignment: 0
@@ -389,60 +368,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b90a10fccb95bb442b975845e528f0a9
-      internalID: 1873450735
+      spriteID: d96d5dc36f0240b4594bb2e9fce5c29a
+      internalID: 2059109777
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_mage_woman_13
+      name: walk_12
       rect:
         serializedVersion: 2
-        x: 168
-        y: 242
-        width: 26
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5476552241d49ad40b91f1d208c4d30f
-      internalID: -1491984979
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_mage_woman_14
-      rect:
-        serializedVersion: 2
-        x: 199
-        y: 242
-        width: 26
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c0ff799637f49f40b5199ea66f903c0
-      internalID: 1006064144
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk_mage_woman_15
-      rect:
-        serializedVersion: 2
-        x: 225
-        y: 242
+        x: 350
+        y: 193
         width: 26
         height: 23
       alignment: 0
@@ -452,18 +389,81 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14e9f21e39f5f3049867a5bfcdc5288f
-      internalID: 419480159
+      spriteID: d9e53b2841e0bd04d93e3779e53ddfb4
+      internalID: -1618885670
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_mage_woman_16
+      name: walk_13
       rect:
         serializedVersion: 2
-        x: 15
-        y: 205
+        x: 430
+        y: 193
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86f691ff7a0d21f4285d8c66d5c90479
+      internalID: 1583310448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_14
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 193
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bbedaf22ecabff4187f601d4d5860a5
+      internalID: 389546811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_15
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 193
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 784cdd89cdbf9df4bbfb57988cf7a30d
+      internalID: 2003336360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_16
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 113
         width: 28
         height: 22
       alignment: 0
@@ -473,18 +473,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6eb67e35a3176ed40bcbdc8f3ab6f273
-      internalID: 598080519
+      spriteID: bad2dfa65958bee439f61cd7d7ec3756
+      internalID: 412532368
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_mage_woman_17
+      name: walk_17
       rect:
         serializedVersion: 2
-        x: 45
-        y: 205
+        x: 108
+        y: 113
         width: 28
         height: 21
       alignment: 0
@@ -494,18 +494,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2d69ce94039aef4c84114467146b36d
-      internalID: -859751460
+      spriteID: d65b77ad09476af47ac9b00a0924c4d2
+      internalID: 1652323306
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_mage_woman_18
+      name: walk_18
       rect:
         serializedVersion: 2
-        x: 74
-        y: 205
+        x: 188
+        y: 113
         width: 28
         height: 21
       alignment: 0
@@ -515,18 +515,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: feb5da36493fef5439637aefa01baa4e
-      internalID: -770424078
+      spriteID: 4ed3e842795ee874ea32f01cf54b3c68
+      internalID: -493681238
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_mage_woman_19
+      name: walk_19
       rect:
         serializedVersion: 2
-        x: 107
-        y: 205
+        x: 268
+        y: 113
         width: 28
         height: 22
       alignment: 0
@@ -536,18 +536,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 975b5703750fd1d4e8e4cacfbf8a5bae
-      internalID: -387624945
+      spriteID: fd464678adab5cb47ae90624a699769e
+      internalID: -338906048
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_mage_woman_20
+      name: walk_20
       rect:
         serializedVersion: 2
-        x: 139
-        y: 205
+        x: 348
+        y: 113
         width: 28
         height: 22
       alignment: 0
@@ -557,18 +557,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e7e8761d672286428935a145af1c542
-      internalID: 1536133508
+      spriteID: 66887024f3ed9834db40c753fdb1782e
+      internalID: -1453595969
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_mage_woman_21
+      name: walk_21
       rect:
         serializedVersion: 2
-        x: 168
-        y: 205
+        x: 428
+        y: 113
         width: 28
         height: 21
       alignment: 0
@@ -578,18 +578,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2307ab34ece7f9f488449d2e4bd988b1
-      internalID: -130230408
+      spriteID: 6e10b3eb3a6130b43a8db6d5db2ab24b
+      internalID: -2098093121
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_mage_woman_22
+      name: walk_22
       rect:
         serializedVersion: 2
-        x: 197
-        y: 205
+        x: 508
+        y: 113
         width: 28
         height: 21
       alignment: 0
@@ -599,18 +599,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec7309e827fdf154aa1ab3c8efa29f06
-      internalID: 681040376
+      spriteID: 5308b9060bc6e444683f67382fb60c8a
+      internalID: -1139524739
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_mage_woman_23
+      name: walk_23
       rect:
         serializedVersion: 2
-        x: 228
-        y: 205
+        x: 588
+        y: 113
         width: 28
         height: 22
       alignment: 0
@@ -620,18 +620,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6839fd14716ec14bb7fc807a5b661e0
-      internalID: -66519529
+      spriteID: b38418b45aeb381449026d47965af459
+      internalID: 1590213543
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_mage_woman_24
+      name: walk_24
       rect:
         serializedVersion: 2
-        x: 9
-        y: 176
+        x: 23
+        y: 33
         width: 28
         height: 19
       alignment: 0
@@ -641,18 +641,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7085dc2b45bc3d48b6e72ae5ded21dd
-      internalID: -93903111
+      spriteID: 2bccd71f45f37a248a5f4e9c8733014d
+      internalID: 1507435758
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_mage_woman_25
+      name: walk_25
       rect:
         serializedVersion: 2
-        x: 39
-        y: 176
+        x: 103
+        y: 33
         width: 28
         height: 18
       alignment: 0
@@ -662,18 +662,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ee729e03ac0b18489d0385619307f83
-      internalID: 868266503
+      spriteID: 847c9c7c0c48e9448abe6485f9bf108c
+      internalID: -483549953
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_mage_woman_26
+      name: walk_26
       rect:
         serializedVersion: 2
-        x: 70
-        y: 176
+        x: 183
+        y: 33
         width: 28
         height: 18
       alignment: 0
@@ -683,18 +683,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 119100812c257ad4ba4ac8be2edd5271
-      internalID: 1380583482
+      spriteID: 36e67b54cd779b643a421e8c7eff9d42
+      internalID: 367308651
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_mage_woman_27
+      name: walk_27
       rect:
         serializedVersion: 2
-        x: 102
-        y: 176
+        x: 263
+        y: 33
         width: 28
         height: 19
       alignment: 0
@@ -704,18 +704,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59bd499552a3394478c8738e0f077739
-      internalID: 1208628919
+      spriteID: 841d2280e182f7f4cb0237accb17fe44
+      internalID: -293351898
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_mage_woman_28
+      name: walk_28
       rect:
         serializedVersion: 2
-        x: 133
-        y: 176
+        x: 343
+        y: 33
         width: 28
         height: 19
       alignment: 0
@@ -725,18 +725,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f84ac883c8e4f94c84d9fb16c856777
-      internalID: -1141937784
+      spriteID: 2e581392fdb70aa4e83b22da3bc1a179
+      internalID: 803491984
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_mage_woman_29
+      name: walk_29
       rect:
         serializedVersion: 2
-        x: 163
-        y: 176
+        x: 423
+        y: 33
         width: 28
         height: 18
       alignment: 0
@@ -746,18 +746,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97743bf5e901ccf43afe4c88cdb0227a
-      internalID: -1137760016
+      spriteID: 07983ef3a9985d1448ce13fbd237bdd4
+      internalID: -785473981
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_mage_woman_30
+      name: walk_30
       rect:
         serializedVersion: 2
-        x: 192
-        y: 176
+        x: 503
+        y: 33
         width: 28
         height: 18
       alignment: 0
@@ -767,18 +767,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d40bc48c06a59b24fa100b52e1098831
-      internalID: -1201334644
+      spriteID: eb6d8701649f3594396196b45236b62b
+      internalID: -298200590
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk_mage_woman_31
+      name: walk_31
       rect:
         serializedVersion: 2
-        x: 223
-        y: 176
+        x: 583
+        y: 33
         width: 28
         height: 19
       alignment: 0
@@ -788,8 +788,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78bdcdda90a05d7428c65acfc0a01b71
-      internalID: -742934652
+      spriteID: 0fecabf9921174c409ffb1196e62a651
+      internalID: 1217557303
       vertices: []
       indices: 
       edges: []
@@ -805,38 +805,38 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      walk_mage_woman_0: 1268287061
-      walk_mage_woman_1: 1028490403
-      walk_mage_woman_10: -1379681045
-      walk_mage_woman_11: 626417854
-      walk_mage_woman_12: 1873450735
-      walk_mage_woman_13: -1491984979
-      walk_mage_woman_14: 1006064144
-      walk_mage_woman_15: 419480159
-      walk_mage_woman_16: 598080519
-      walk_mage_woman_17: -859751460
-      walk_mage_woman_18: -770424078
-      walk_mage_woman_19: -387624945
-      walk_mage_woman_2: -1721352807
-      walk_mage_woman_20: 1536133508
-      walk_mage_woman_21: -130230408
-      walk_mage_woman_22: 681040376
-      walk_mage_woman_23: -66519529
-      walk_mage_woman_24: -93903111
-      walk_mage_woman_25: 868266503
-      walk_mage_woman_26: 1380583482
-      walk_mage_woman_27: 1208628919
-      walk_mage_woman_28: -1141937784
-      walk_mage_woman_29: -1137760016
-      walk_mage_woman_3: 2031755450
-      walk_mage_woman_30: -1201334644
-      walk_mage_woman_31: -742934652
-      walk_mage_woman_4: 2038957802
-      walk_mage_woman_5: -382697153
-      walk_mage_woman_6: 536663173
-      walk_mage_woman_7: 939980134
-      walk_mage_woman_8: 667119694
-      walk_mage_woman_9: -1026683004
+      walk_0: -1304699650
+      walk_1: -1766827430
+      walk_10: -304343735
+      walk_11: 2059109777
+      walk_12: -1618885670
+      walk_13: 1583310448
+      walk_14: 389546811
+      walk_15: 2003336360
+      walk_16: 412532368
+      walk_17: 1652323306
+      walk_18: -493681238
+      walk_19: -338906048
+      walk_2: 681112197
+      walk_20: -1453595969
+      walk_21: -2098093121
+      walk_22: -1139524739
+      walk_23: 1590213543
+      walk_24: 1507435758
+      walk_25: -483549953
+      walk_26: 367308651
+      walk_27: -293351898
+      walk_28: 803491984
+      walk_29: -785473981
+      walk_3: 800264659
+      walk_30: -298200590
+      walk_31: 1217557303
+      walk_4: 132448271
+      walk_5: -238155802
+      walk_6: -223249521
+      walk_7: 1671160343
+      walk_8: 2032422171
+      walk_9: 1889949718
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
