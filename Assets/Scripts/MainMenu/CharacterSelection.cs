@@ -18,7 +18,7 @@ public class CharacterSelection : MonoBehaviour
         selectedSkinID = 0;
     }
 
-    public void PlayGame(string sceneName)
+    public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
     }
