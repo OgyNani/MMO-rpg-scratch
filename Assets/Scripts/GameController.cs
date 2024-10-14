@@ -6,9 +6,20 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
-        Mage mage = new Mage();
-        Skin selectedSkin = mage.GetSkinByID(1);
-        playerAnimator.SetCharacterAnimations(selectedSkin);
-    }
+        string selectedCharacter = CharacterSelection.selectedCharacter;
+        int selectedSkinID = CharacterSelection.selectedSkinID;
 
+        if (selectedCharacter == "Mage")
+        {
+            Mage mage = new Mage();
+            Skin selectedSkin = mage.GetSkinByID(selectedSkinID);
+            playerAnimator.SetCharacterAnimations(selectedSkin);
+        }
+        else if (selectedCharacter == "Dummy")
+        {
+            Dummy dummy = new Dummy();
+            Skin selectedSkin = dummy.GetSkinByID(selectedSkinID);
+            playerAnimator.SetCharacterAnimations(selectedSkin);
+        }
+    }
 }
