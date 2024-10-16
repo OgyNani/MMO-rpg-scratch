@@ -50,6 +50,15 @@ TagManager:
   - name: Vegetation
     uniqueID: 317630965
     locked: 0
-  - name: Player
+  - name: Trail
     uniqueID: 1640166043
+    locked: 0
+  - name: Buildings
+    uniqueID: 776808493
+    locked: 0
+  - name: PlayerShadow
+    uniqueID: 1557038353
+    locked: 0
+  - name: Player
+    uniqueID: 51192671
     locked: 0
