@@ -2286,7 +2286,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: topDown_baseTiles_103
+      name: SAND_Base
       rect:
         serializedVersion: 2
         x: 112
@@ -4238,7 +4238,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: topDown_baseTiles_193
+      name: IslandSAND_Top_Left
       rect:
         serializedVersion: 2
         x: 496
@@ -4259,7 +4259,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: topDown_baseTiles_194
+      name: IslandSAND_Top_Right
       rect:
         serializedVersion: 2
         x: 512
@@ -4959,7 +4959,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: topDown_baseTiles_226
+      name: IslandSAND_Bottom_Left
       rect:
         serializedVersion: 2
         x: 496
@@ -4980,7 +4980,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: topDown_baseTiles_227
+      name: IslandSAND_Bottom_Right
       rect:
         serializedVersion: 2
         x: 512
@@ -5711,7 +5711,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: topDown_baseTiles_261
+      name: IslandSAND_Inner_Bottom_Right
       rect:
         serializedVersion: 2
         x: 96
@@ -5732,7 +5732,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: topDown_baseTiles_262
+      name: IslandSAND_Bottom_A
       rect:
         serializedVersion: 2
         x: 112
@@ -5753,7 +5753,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: topDown_baseTiles_263
+      name: IslandSAND_Inner_Bottom_Left
       rect:
         serializedVersion: 2
         x: 128
@@ -5774,7 +5774,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: topDown_baseTiles_264
+      name: IslandSAN_Top_Left
       rect:
         serializedVersion: 2
         x: 144
@@ -5795,7 +5795,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: topDown_baseTiles_265
+      name: IslandSAN_Top_Right
       rect:
         serializedVersion: 2
         x: 160
@@ -6320,7 +6320,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: topDown_baseTiles_290
+      name: IslandSAND_Right
       rect:
         serializedVersion: 2
         x: 96
@@ -6362,7 +6362,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: topDown_baseTiles_292
+      name: IslandSAND_Left
       rect:
         serializedVersion: 2
         x: 128
@@ -6383,7 +6383,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: topDown_baseTiles_293
+      name: IslandSAN_Bottom_Left
       rect:
         serializedVersion: 2
         x: 144
@@ -6404,7 +6404,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: topDown_baseTiles_294
+      name: IslandSAN_Bottom_Right
       rect:
         serializedVersion: 2
         x: 160
@@ -6698,7 +6698,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: topDown_baseTiles_308
+      name: IslandSAND_Inner_Top_Right
       rect:
         serializedVersion: 2
         x: 96
@@ -6719,7 +6719,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: topDown_baseTiles_309
+      name: IslandSAND_Top
       rect:
         serializedVersion: 2
         x: 112
@@ -6740,7 +6740,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: topDown_baseTiles_310
+      name: IslandSAND_Inner_Top_Left
       rect:
         serializedVersion: 2
         x: 128
@@ -13250,6 +13250,22 @@ TextureImporter:
       Grass_04: 106256831
       Grass_05: -728730175
       Grass_Base: -142264187
+      IslandSAND_Bottom_A: 128912664
+      IslandSAND_Bottom_Left: -1926101974
+      IslandSAND_Bottom_Right: -1411543444
+      IslandSAND_Inner_Bottom_Left: 713020240
+      IslandSAND_Inner_Bottom_Right: -927240997
+      IslandSAND_Inner_Top_Left: -1995312397
+      IslandSAND_Inner_Top_Right: -196766995
+      IslandSAND_Left: -271977749
+      IslandSAND_Right: -653701151
+      IslandSAND_Top: -2021294606
+      IslandSAND_Top_Left: 1079090206
+      IslandSAND_Top_Right: 542808640
+      IslandSAN_Bottom_Left: -1288641079
+      IslandSAN_Bottom_Right: 1743632518
+      IslandSAN_Top_Left: -1751234129
+      IslandSAN_Top_Right: 834957682
       Island_Bottom_A: -857796250
       Island_Bottom_B: -83468680
       Island_Bottom_C: 1349745097
@@ -13274,6 +13290,7 @@ TextureImporter:
       Plant_05: 1781784530
       Plant_06: 1940646779
       Plant_07: 509587198
+      SAND_Base: 1475257599
       Wave_A: -575915761
       Wave_B: 1219293431
       Wave_C: 1143859329
@@ -13284,7 +13301,6 @@ TextureImporter:
       topDown_baseTiles_100: -1369379799
       topDown_baseTiles_101: 354225066
       topDown_baseTiles_102: 1040226781
-      topDown_baseTiles_103: 1475257599
       topDown_baseTiles_104: -801600394
       topDown_baseTiles_105: -1444312432
       topDown_baseTiles_106: -172551359
@@ -13377,8 +13393,6 @@ TextureImporter:
       topDown_baseTiles_190: 1498277658
       topDown_baseTiles_191: -196313056
       topDown_baseTiles_192: 13988495
-      topDown_baseTiles_193: 1079090206
-      topDown_baseTiles_194: 542808640
       topDown_baseTiles_195: -1514654095
       topDown_baseTiles_196: -1020388311
       topDown_baseTiles_197: -745097755
@@ -13408,8 +13422,6 @@ TextureImporter:
       topDown_baseTiles_223: 182602311
       topDown_baseTiles_224: 1545010371
       topDown_baseTiles_225: -1439050722
-      topDown_baseTiles_226: -1926101974
-      topDown_baseTiles_227: -1411543444
       topDown_baseTiles_228: -989755734
       topDown_baseTiles_229: 899558656
       topDown_baseTiles_23: -657892162
@@ -13442,11 +13454,6 @@ TextureImporter:
       topDown_baseTiles_259: 1317057611
       topDown_baseTiles_26: 194058341
       topDown_baseTiles_260: -718442096
-      topDown_baseTiles_261: -927240997
-      topDown_baseTiles_262: 128912664
-      topDown_baseTiles_263: 713020240
-      topDown_baseTiles_264: -1751234129
-      topDown_baseTiles_265: 834957682
       topDown_baseTiles_266: -287911721
       topDown_baseTiles_267: -837225744
       topDown_baseTiles_268: 2140305337
@@ -13472,11 +13479,7 @@ TextureImporter:
       topDown_baseTiles_287: -554609429
       topDown_baseTiles_288: 658775468
       topDown_baseTiles_289: -1437926777
-      topDown_baseTiles_290: -653701151
       topDown_baseTiles_291: -1301694233
-      topDown_baseTiles_292: -271977749
-      topDown_baseTiles_293: -1288641079
-      topDown_baseTiles_294: 1743632518
       topDown_baseTiles_295: -1353790526
       topDown_baseTiles_296: -309019129
       topDown_baseTiles_297: 945807795
@@ -13491,9 +13494,6 @@ TextureImporter:
       topDown_baseTiles_305: -1765412607
       topDown_baseTiles_306: 841776496
       topDown_baseTiles_307: -213750297
-      topDown_baseTiles_308: -196766995
-      topDown_baseTiles_309: -2021294606
-      topDown_baseTiles_310: -1995312397
       topDown_baseTiles_311: -1934020516
       topDown_baseTiles_312: 1938285999
       topDown_baseTiles_313: 1296293021
