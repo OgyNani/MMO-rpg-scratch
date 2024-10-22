@@ -11,8 +11,8 @@ TagManager:
   - 
   - Water
   - UI
-  - CHARS
-  - 
+  - PLAYER
+  - MOBS
   - 
   - 
   - 
@@ -61,4 +61,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 51192671
+    locked: 0
+  - name: Enemy
+    uniqueID: 3738699113
     locked: 0
