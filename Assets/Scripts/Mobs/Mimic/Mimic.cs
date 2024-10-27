@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class Mimic : MonoBehaviour, IMobData
 {
-    [SerializeField] private float moveSpeed = 1.5f;
-    [SerializeField] private float roamingRadius = 3f;
-    [SerializeField] private float stopDistance = 0.15f;
+    private float moveSpeed = 1.5f;
+    private float roamingRadius = 3f;
+    private float stopDistance = 0.15f;
+    private float detectionRadius = 0f;
 
     private enemyAi enemyAi;
     private enemyPathFinder enemyPathFinder;
@@ -14,28 +15,7 @@ public class Mimic : MonoBehaviour, IMobData
         enemyAi = GetComponent<enemyAi>();
         enemyPathFinder = GetComponent<enemyPathFinder>();
 
-        // Проверяем, что компоненты не null
-        if (enemyAi == null)
-        {
-            Debug.LogError("enemyAi is null in SkeletonWarrior");
-        }
-        if (enemyPathFinder == null)
-        {
-            Debug.LogError("enemyPathFinder is null in SkeletonWarrior");
-        }
-
         IMobData mobData = this as IMobData;
-
-        // Проверяем, что mobData не null
-        if (mobData != null)
-        {
-            enemyAi.Init(mobData);
-            enemyPathFinder.Init(mobData);
-        }
-        else
-        {
-            Debug.LogError("mobData is null in SkeletonWarrior");
-        }
     }
 
 
@@ -49,6 +29,10 @@ public class Mimic : MonoBehaviour, IMobData
         return roamingRadius;
     }
 
+    public float GetDetectionRadius()
+    {
+        return detectionRadius;
+    }
     public float GetStopDistance()
     {
         return stopDistance;

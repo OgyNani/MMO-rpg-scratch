@@ -1,49 +1,96 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class enemyAi : MonoBehaviour
 {
     private float roamingRadius;
+    private float detectionRadius;
     private enemyPathFinder enemyPathFinder;
-    private Vector2 startPosition;  // Начальная позиция
+    private Vector2 startPosition;
+    private Transform playerTransform;
+    private State state;
+
+    private enum State
+    {
+        Roaming,
+        ChasingPlayer
+    }
 
     public void Init(IMobData mobData)
     {
         roamingRadius = mobData.GetRoamingRadius();
-        enemyPathFinder.Init(mobData); // Передаём данные в enemyPathFinder
+        detectionRadius = mobData.GetDetectionRadius();
+        enemyPathFinder.Init(mobData);
     }
 
     private void Awake()
     {
         enemyPathFinder = GetComponent<enemyPathFinder>();
+        state = State.Roaming;
     }
 
     private void Start()
     {
-        startPosition = transform.position;  // Инициализируем стартовую позицию при старте
+        playerTransform = GameObject.FindWithTag("Player")?.transform;
+        startPosition = transform.position;
         IMobData mobData = GetComponent<IMobData>();
         Init(mobData);
-        StartCoroutine(RoamingRoutine()); // Запускаем движение
+
+        StartCoroutine(RoamingRoutine());
+    }
+
+    private void Update()
+    {
+        CheckForPlayer();
+    }
+
+    private void CheckForPlayer()
+    {
+        if (playerTransform == null) return;
+
+        float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
+
+        if (distanceToPlayer < detectionRadius && state != State.ChasingPlayer)
+        {
+            state = State.ChasingPlayer;
+            StopCoroutine(RoamingRoutine());
+            StartCoroutine(ChasePlayer());
+        }
+        else if (distanceToPlayer >= detectionRadius && state == State.ChasingPlayer)
+        {
+            state = State.Roaming;
+            StopCoroutine(ChasePlayer());
+            StartCoroutine(RoamingRoutine());
+        }
     }
 
     private IEnumerator RoamingRoutine()
     {
-        while (true)
+        while (state == State.Roaming)
         {
-            Vector2 roamPosition = GetRoamingPosition(); // Получаем случайную точку
-            enemyPathFinder.MoveTo(roamPosition); // Передаем точку для перемещения
-            yield return new WaitForSeconds(2f); // Ждем 2 секунды перед следующим перемещением
+            Vector2 roamPosition = GetRoamingPosition();
+            enemyPathFinder.MoveTo(roamPosition);
+            yield return new WaitForSeconds(2f);
         }
     }
 
     private Vector2 GetRoamingPosition()
     {
-        // Генерация случайной точки в пределах радиуса от стартовой позиции
-        Vector2 randomDirection = Random.insideUnitCircle.normalized; // Направление в пределах окружности
-        float distance = Random.Range(0f, roamingRadius); // Случайная дистанция до границы радиуса
-        Vector2 roamPosition = startPosition + randomDirection * distance; // Новая позиция для перемещения
-
+        Vector2 randomDirection = Random.insideUnitCircle.normalized;
+        float distance = Random.Range(0f, roamingRadius);
+        Vector2 roamPosition = startPosition + randomDirection * distance;
         return roamPosition;
+    }
+
+    private IEnumerator ChasePlayer()
+    {
+        while (state == State.ChasingPlayer)
+        {
+            if (playerTransform != null)
+            {
+                enemyPathFinder.MoveTo(playerTransform.position);
+            }
+            yield return null;
+        }
     }
 }

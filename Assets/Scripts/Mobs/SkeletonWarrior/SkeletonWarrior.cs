@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class SkeletonWarrior : MonoBehaviour, IMobData
 {
-    [SerializeField] private float moveSpeed = 2f;
-    [SerializeField] private float roamingRadius = 5f;
-    [SerializeField] private float stopDistance = 0.1f;
+    private float moveSpeed = 2f;
+    private float roamingRadius = 5f;
+    private float stopDistance = 0.1f;
+    private float detectionRadius = 5f;
 
     private enemyAi enemyAi;
     private enemyPathFinder enemyPathFinder;
@@ -26,6 +27,11 @@ public class SkeletonWarrior : MonoBehaviour, IMobData
     public float GetRoamingRadius()
     {
         return roamingRadius;
+    }
+
+    public float GetDetectionRadius()
+    {
+        return detectionRadius;
     }
 
     public float GetStopDistance()
