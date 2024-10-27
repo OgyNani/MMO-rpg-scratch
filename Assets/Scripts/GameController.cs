@@ -4,7 +4,7 @@ public class GameController : MonoBehaviour
 {
     public PlayerAnimator playerAnimator;
 
-    void Start()
+    void Start() 
     {
         string selectedCharacter = CharacterSelection.selectedCharacter;
         int selectedSkinID = CharacterSelection.selectedSkinID;

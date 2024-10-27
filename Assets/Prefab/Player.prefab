@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8304431378607480070}
   - component: {fileID: 5708448710044234288}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,10 +100,11 @@ GameObject:
   - component: {fileID: 7912729588305682949}
   - component: {fileID: -237748263966930565}
   - component: {fileID: 1824202451104574935}
+  - component: {fileID: -8228961812831718741}
   - component: {fileID: 6938710805184907116}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,7 +118,7 @@ Transform:
   m_GameObject: {fileID: 1796212573547930590}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.909, y: 1.091, z: 0}
+  m_LocalPosition: {x: 22.52, y: -32.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -163,8 +164,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1640166043
-  m_SortingLayer: 4
+  m_SortingLayerID: 51192671
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -2124142470, guid: 59337132bacb6a9468b81ce2ef913ffd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -176,7 +177,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!50 &660140732683190241
 Rigidbody2D:
   serializedVersion: 4
@@ -377,11 +378,28 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: c63b896e-7846-408b-b7b8-6b4431da2aab
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 13aed579-0ec6-4b8e-bec5-329b0c5b6352
+    m_ActionName: Player/Interact[/Keyboard/f]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &-8228961812831718741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796212573547930590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33515e87a634812438d50dced2c6acc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactPrompt: {fileID: 0}
 --- !u!95 &6938710805184907116
 Animator:
   serializedVersion: 5
@@ -414,7 +432,7 @@ GameObject:
   - component: {fileID: 6630477872082851795}
   - component: {fileID: 7507989196677567272}
   - component: {fileID: 5230247325581786229}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -501,7 +519,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2415037207490888112}
   - component: {fileID: 2372840768871967359}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlayerCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -546,7 +564,7 @@ MonoBehaviour:
   m_Follow: {fileID: 3794224130667531718}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 5.16
+    OrthographicSize: 7
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
