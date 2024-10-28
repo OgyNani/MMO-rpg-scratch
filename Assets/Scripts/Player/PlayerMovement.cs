@@ -10,9 +10,12 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector]
     public Vector2 move_dir;
 
+    private PlayerSkills playerSkills;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        playerSkills = GetComponent<PlayerSkills>();
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -27,6 +30,14 @@ public class PlayerMovement : MonoBehaviour
 
     void Move()
     {
-        rb.velocity = move_dir * move_speed;
+        if (playerSkills != null && !playerSkills.IsShieldActive())
+        {
+            rb.velocity = move_dir * move_speed;
+        }
+        else
+        {
+            // Stop movement if shield is active
+            rb.velocity = Vector2.zero;
+        }
     }
 }

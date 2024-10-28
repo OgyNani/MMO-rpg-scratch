@@ -939,6 +939,7 @@ GameObject:
   - component: {fileID: 552589638}
   - component: {fileID: 552589640}
   - component: {fileID: 552589639}
+  - component: {fileID: 552589641}
   m_Layer: 6
   m_Name: Mage
   m_TagString: Untagged
@@ -962,8 +963,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 15, y: -35}
-  m_SizeDelta: {x: -107.745, y: -112.4869}
+  m_AnchoredPosition: {x: -7, y: 0.066101074}
+  m_SizeDelta: {x: -59.3032, y: -42.3547}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &552589639
 MonoBehaviour:
@@ -985,7 +986,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1710952179, guid: 6d7a8e3a774dd264e89d58ae506b0839, type: 3}
+  m_Sprite: {fileID: 472044847, guid: 59337132bacb6a9468b81ce2ef913ffd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1003,6 +1004,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 552589637}
   m_CullTransparentMesh: 1
+--- !u!95 &552589641
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552589637}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1fca9fc227e94fa40b8340dd68f72eb2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &642572827 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 154848623590084925, guid: 546c713b5b3b5e1478cbb1dcf8030647, type: 3}
@@ -1485,6 +1507,7 @@ GameObject:
   - component: {fileID: 1146155928}
   - component: {fileID: 1146155930}
   - component: {fileID: 1146155929}
+  - component: {fileID: 1146155931}
   m_Layer: 6
   m_Name: Dummy
   m_TagString: Untagged
@@ -1549,6 +1572,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1146155927}
   m_CullTransparentMesh: 1
+--- !u!95 &1146155931
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146155927}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c15e80fa296f99b4abac2cf8982b7236, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1152470808
 GameObject:
   m_ObjectHideFlags: 0
@@ -2045,6 +2089,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainController
       objectReference: {fileID: 0}
+    - target: {fileID: 8871156147959429416, guid: 546c713b5b3b5e1478cbb1dcf8030647, type: 3}
+      propertyPath: mageAnimator
+      value: 
+      objectReference: {fileID: 552589641}
+    - target: {fileID: 8871156147959429416, guid: 546c713b5b3b5e1478cbb1dcf8030647, type: 3}
+      propertyPath: dummyAnimator
+      value: 
+      objectReference: {fileID: 1146155931}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

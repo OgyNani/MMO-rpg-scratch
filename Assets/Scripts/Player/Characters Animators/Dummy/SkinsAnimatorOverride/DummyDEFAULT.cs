@@ -13,14 +13,21 @@ public class DummyDEFAULT : Skin
     {
         var animations = new Dictionary<string, AnimationClip>
     {
-        { "IdleDOWN", Resources.Load<AnimationClip>("Sprites/Characters/Dummy/SKINS/DEFAULT/Idle/Animation/IdleDOWM") },
-        { "IdleUP", Resources.Load<AnimationClip>("Sprites/Characters/Dummy/SKINS/DEFAULT/Idle/Animation/IdleUP") },
-        { "IdleLEFT", Resources.Load<AnimationClip>("Sprites/Characters/Dummy/SKINS/DEFAULT/Idle/Animation/IdleLEFT") },
-        { "IdleRIGHT", Resources.Load<AnimationClip>("Sprites/Characters/Dummy/SKINS/DEFAULT/Idle/Animation/IdleRIGHT") },
-        { "WalkDOWN", Resources.Load<AnimationClip>("Sprites/Characters/Dummy/SKINS/DEFAULT/Walk/Animation/WalkDOWN") },
-        { "WalkUP", Resources.Load<AnimationClip>("Sprites/Characters/Dummy/SKINS/DEFAULT/Walk/Animation/WalkUP") },
-        { "WalkLEFT", Resources.Load<AnimationClip>("Sprites/Characters/Dummy/SKINS/DEFAULT/Walk/Animation/WalkLEFT") },
-        { "WalkRIGHT", Resources.Load<AnimationClip>("Sprites/Characters/Dummy/SKINS/DEFAULT/Walk/Animation/WalkRIGHT") }
+        //IDLE
+        { "IdleDOWN", Resources.Load<AnimationClip>("Animations/Characters/Dummy/SKINS/DEFAULT/Idle/Animation/IdleDOWM") },
+        { "IdleUP", Resources.Load<AnimationClip>("Animations/Characters/Dummy/SKINS/DEFAULT/Idle/Animation/IdleUP") },
+        { "IdleLEFT", Resources.Load<AnimationClip>("Animations/Characters/Dummy/SKINS/DEFAULT/Idle/Animation/IdleLEFT") },
+        { "IdleRIGHT", Resources.Load<AnimationClip>("Animations/Characters/Dummy/SKINS/DEFAULT/Idle/Animation/IdleRIGHT") },
+        //WALK
+        { "WalkDOWN", Resources.Load<AnimationClip>("Animations/Characters/Dummy/SKINS/DEFAULT/Walk/Animation/WalkDOWN") },
+        { "WalkUP", Resources.Load<AnimationClip>("Animations/Characters/Dummy/SKINS/DEFAULT/Walk/Animation/WalkUP") },
+        { "WalkLEFT", Resources.Load<AnimationClip>("Animations/Characters/Dummy/SKINS/DEFAULT/Walk/Animation/WalkLEFT") },
+        { "WalkRIGHT", Resources.Load<AnimationClip>("Animations/Characters/Dummy/SKINS/DEFAULT/Walk/Animation/WalkRIGHT") },
+        //SHIELD
+        { "ShieldDOWN", Resources.Load<AnimationClip>("Animations/Characters/Dummy/SKINS/DEFAULT/Shield/Animation/ShieldDOWN") },
+        { "ShieldUP", Resources.Load<AnimationClip>("Animations/Characters/Dummy/SKINS/DEFAULT/Shield/Animation/ShieldUP") },
+        { "ShieldLEFT", Resources.Load<AnimationClip>("Animations/Characters/Dummy/SKINS/DEFAULT/Shield/Animation/ShieldLEFT") },
+        { "ShieldRIGHT", Resources.Load<AnimationClip>("Animations/Characters/Dummy/SKINS/DEFAULT/Shield/Animation/ShieldRIGHT") },
     };
 
         return animations;

@@ -1,6 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerAnimator : MonoBehaviour
 {
@@ -9,8 +9,9 @@ public class PlayerAnimator : MonoBehaviour
     private SpriteRenderer spriteRenderer;
 
     private Vector2 lastMoveDir;
-
     private AnimatorOverrideController overrideController;
+
+    private bool isShieldActive;
 
     void Awake()
     {
@@ -20,7 +21,6 @@ public class PlayerAnimator : MonoBehaviour
         lastMoveDir = Vector2.down;
 
         overrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
-
         animator.runtimeAnimatorController = overrideController;
     }
 
@@ -45,22 +45,32 @@ public class PlayerAnimator : MonoBehaviour
         overrideController.ApplyOverrides(overrides);
     }
 
+    public void SetShieldActive(bool isActive)
+    {
+        isShieldActive = isActive;
+        animator.SetBool("Shield", isActive);
+    }
+
     void Update()
     {
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 directionToMouse = (mousePosition - (Vector2)transform.position).normalized;
 
-        if (playerMovement.move_dir.x != 0 || playerMovement.move_dir.y != 0)
-        {
-            animator.SetBool("Move", true);
-            lastMoveDir = directionToMouse;
-        }
-        else
-        {
-            animator.SetBool("Move", false);
-        }
-
+        // Обновляем направление вне зависимости от того, активен ли щит
         SpriteDirectionChecker(directionToMouse);
+
+        if (!isShieldActive) // Обновляем движение только если щит не активен
+        {
+            if (playerMovement.move_dir.x != 0 || playerMovement.move_dir.y != 0)
+            {
+                animator.SetBool("Move", true);
+                lastMoveDir = directionToMouse;
+            }
+            else
+            {
+                animator.SetBool("Move", false);
+            }
+        }
     }
 
     void SpriteDirectionChecker(Vector2 direction)
