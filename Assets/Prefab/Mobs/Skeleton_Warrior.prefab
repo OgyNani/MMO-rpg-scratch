@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6704211334766203136}
   - component: {fileID: 5169017903328622696}
   - component: {fileID: 6964748982346178854}
+  - component: {fileID: 2154834522795740263}
   m_Layer: 7
   m_Name: Skeleton_Warrior
   m_TagString: Untagged
@@ -219,3 +220,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2154834522795740263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4400645203264200868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9d5791361da64942a0b5a0726251905, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
