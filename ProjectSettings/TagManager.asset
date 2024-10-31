@@ -13,9 +13,9 @@ TagManager:
   - UI
   - PLAYER
   - MOBS
-  - 
-  - 
-  - 
+  - Detection
+  - PlayerHitbox
+  - Attack
   - 
   - 
   - 

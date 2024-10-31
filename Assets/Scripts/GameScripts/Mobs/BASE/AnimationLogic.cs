@@ -5,11 +5,13 @@ public class AnimationLogic : MonoBehaviour
     private Animator animator;
     private enemyPathFinder pathFinder;
     private Vector2 lastDirection;
+    private EnemyAttack enemyAttack;
 
     void Start()
     {
         animator = GetComponent<Animator>();
         pathFinder = GetComponent<enemyPathFinder>();
+        enemyAttack = GetComponent<EnemyAttack>();
 
         lastDirection = Vector2.down;
     }
@@ -17,6 +19,8 @@ public class AnimationLogic : MonoBehaviour
     void Update()
     {
         if (pathFinder == null || animator == null) return;
+
+        if (enemyAttack.isAttacking) return;
 
         Vector2 currentDirection = pathFinder.CurrentDirection();
         bool isMoving = currentDirection != Vector2.zero;

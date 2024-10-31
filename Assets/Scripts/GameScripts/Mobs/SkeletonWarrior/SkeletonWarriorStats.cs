@@ -1,80 +1,43 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class SkeletonWarriorStats : MonoBehaviour
+public class SkeletonWarriorStats : MonoBehaviour, IMobData
 {
-    public HealthBar health_bar;
-    public ManaBar mana_bar;
+    private readonly float moveSpeed = 2f;
+    private readonly float maxHealth = 100;
+    private readonly float maxMana = 100;
+    private readonly float defence = 0;
+    private readonly float wisdom = 2;
+    private readonly float vitality = 2;
+    private readonly float attack = 5;
+    private readonly float critDamagePercent = 4;
+    private readonly float critChancePercent = 4;
+    private readonly float expOnKill = 10;
+    private readonly float roamingRadius = 5f;
+    private readonly float stopDistance = 0.1f;
+    private readonly float detectionRadius = 5f;
 
-    private SkeletonWarrior skeletonWarrior;
+    private enemyAi enemyAi;
+    private enemyPathFinder enemyPathFinder;
 
-    private float current_health;
-    private float max_health;
-    private float current_mana;
-    private float max_mana;
-    private float defence;
-    private float wisdom;
-    private float vitality;
-    private float damage_take;
-
-    private void Start()
+    private void Awake()
     {
-        max_health = skeletonWarrior.GetMaxHealth();
-        max_mana = skeletonWarrior.GetMaxMana();
-        defence = skeletonWarrior.GetDefence();
-        wisdom = skeletonWarrior.GetWisdom();
-        vitality = skeletonWarrior.GetVitality();
-        current_health = max_health;
-        current_mana = max_mana;
+        enemyAi = GetComponent<enemyAi>();
+        enemyPathFinder = GetComponent<enemyPathFinder>();
 
-        health_bar.SetSliderMax(current_health);
-        mana_bar.SetSliderMax(current_mana);
+        IMobData mobData = this as IMobData;
     }
 
-    private void Update()
-    {
-        //MAX CAP OF HEAL (TO PREVENT OVERHEAL/OVERREGEN)
-        if (current_health > max_health) { current_health = max_health; }
-        if (current_mana > max_mana) { current_mana = max_mana; }
-
-        //REGEN LOGIC
-        if (current_health < max_health) { HealthRegen(); }
-        if (current_mana < max_mana) { ManaRegen(); }
-
-        //DEATH LOGIC
-        if (current_health <= 0) { Die(); }
-
-    }
-
-    public void TakeDamage(float amount)
-    {
-        if (amount < 0) return;
-
-        damage_take = amount - defence;
-        current_health -= damage_take;
-        health_bar.SetSlider(current_health);
-    }
-    public void Heal(float amount)
-    {
-        current_health += amount;
-        health_bar.SetSlider(current_health);
-    }
-
-    private void HealthRegen()
-    {
-        current_health += Mathf.Max(vitality, 0);
-        health_bar.SetSlider(current_health);
-    }
-
-    private void ManaRegen()
-    {
-        current_mana += Mathf.Max(wisdom, 0);
-        mana_bar.SetSlider(current_mana);
-    }
-
-    private void Die()
-    {
-        Debug.Log("mob died....");
-    }
+    public float GetMoveSpeed(){return moveSpeed;}
+    public float GetMaxHealth(){return maxHealth;}
+    public float GetMaxMana(){return maxMana; }
+    public float GetDefence(){return defence; }
+    public float GetWisdom(){return wisdom; }
+    public float GetVitality(){return vitality; }
+    public float GetAttack(){return attack; }
+    public float GetCritDamagePercent(){return critDamagePercent; }
+    public float GetCritChancePercent(){return critChancePercent; }
+    public float GetExpOnKill(){return expOnKill; }
+    public float GetRoamingRadius(){return roamingRadius;}
+    public float GetDetectionRadius(){return detectionRadius;}
+    public float GetStopDistance(){return stopDistance;}
 }
