@@ -9,6 +9,7 @@ public class enemyAi : MonoBehaviour
     private Vector2 startPosition;
     private Transform playerTransform;
     private State state;
+    private bool isChasing = false;
 
     private enum State
     {
@@ -27,14 +28,26 @@ public class enemyAi : MonoBehaviour
     {
         enemyPathFinder = GetComponent<enemyPathFinder>();
         state = State.Roaming;
+        startPosition = transform.position;
     }
 
-    private void Start()
+    private IEnumerator Start()
     {
+        // Даем кадр на инициализацию сцены и позиций объектов
+        yield return null;
+
+        // Инициализируем игрока после загрузки сцены
         playerTransform = GameObject.FindWithTag("Player")?.transform;
-        startPosition = transform.position;
+
         IMobData mobData = GetComponent<IMobData>();
-        Init(mobData);
+        if (mobData != null)
+        {
+            Init(mobData);
+        }
+        else
+        {
+            Debug.LogError("IMobData not found on the enemy object.");
+        }
 
         StartCoroutine(RoamingRoutine());
     }
@@ -50,15 +63,17 @@ public class enemyAi : MonoBehaviour
 
         float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
 
-        if (distanceToPlayer < detectionRadius && state != State.ChasingPlayer)
+        if (distanceToPlayer < detectionRadius && state != State.ChasingPlayer && !isChasing)
         {
             state = State.ChasingPlayer;
+            isChasing = true;
             StopCoroutine(RoamingRoutine());
             StartCoroutine(ChasePlayer());
         }
-        else if (distanceToPlayer >= detectionRadius && state == State.ChasingPlayer)
+        else if (distanceToPlayer >= detectionRadius && state == State.ChasingPlayer && isChasing)
         {
             state = State.Roaming;
+            isChasing = false;
             StopCoroutine(ChasePlayer());
             StartCoroutine(RoamingRoutine());
         }
@@ -90,7 +105,13 @@ public class enemyAi : MonoBehaviour
             {
                 enemyPathFinder.MoveTo(playerTransform.position);
             }
+            else
+            {
+                isChasing = false;
+                yield break;
+            }
             yield return null;
         }
+        isChasing = false;
     }
 }

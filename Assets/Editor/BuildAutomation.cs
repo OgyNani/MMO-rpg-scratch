@@ -1,6 +1,8 @@
 using System.Diagnostics;
 using System.IO;
+using System.Threading;
 using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class BuildAutomation : MonoBehaviour
@@ -11,27 +13,53 @@ public class BuildAutomation : MonoBehaviour
     [MenuItem("Tools/Build and Archive Game")]
     public static void BuildAndArchive()
     {
-        // 1. Очистка папки назначения
-        if (Directory.Exists(buildFolderPath))
-        {
-            Directory.Delete(buildFolderPath, true);
-        }
+        UnityEngine.Debug.Log("Starting automated build...");
 
-        // 2. Удаление старого архива
+        // Принудительное сохранение всех сцен и ассетов
+        SaveAllScenesAndAssets();
+
+        // Удаление старого архива, если он существует
         if (File.Exists(archiveFilePath))
         {
             File.Delete(archiveFilePath);
         }
 
-        // 3. Создание новой папки для билда
-        Directory.CreateDirectory(buildFolderPath);
+        string exePath = buildFolderPath + "/hopon.exe";
 
-        // 4. Выполнение билда
+        // Удаление старого исполняемого файла, если он существует
+        if (File.Exists(exePath))
+        {
+            File.Delete(exePath);
+        }
+
+        // Небольшая задержка перед билдом
+        Thread.Sleep(500);
+
         string[] scenes = { "Assets/Scenes/MainMenu.unity", "Assets/Scenes/World.unity", "Assets/Scenes/MainWorld.unity" };
-        BuildPipeline.BuildPlayer(scenes, buildFolderPath + "/GAME.exe", BuildTarget.StandaloneWindows, BuildOptions.None);
 
-        // 5. Архивация с помощью WinRAR
+        UnityEngine.Debug.Log("Building project...");
+        BuildPipeline.BuildPlayer(scenes, exePath, BuildTarget.StandaloneWindows, BuildOptions.None);
+
+        UnityEngine.Debug.Log("Creating archive...");
         CreateArchive();
+
+        UnityEngine.Debug.Log("Automated build completed successfully.");
+    }
+
+    private static void SaveAllScenesAndAssets()
+    {
+        // Сохраняем все сцены и ассеты
+        for (int i = 0; i < EditorSceneManager.sceneCount; i++)
+        {
+            var scene = EditorSceneManager.GetSceneAt(i);
+            if (scene.isDirty)
+            {
+                EditorSceneManager.SaveScene(scene);
+            }
+        }
+        AssetDatabase.SaveAssets();
+        AssetDatabase.Refresh();
+        UnityEngine.Debug.Log("All scenes and assets saved.");
     }
 
     private static void CreateArchive()
@@ -40,6 +68,7 @@ public class BuildAutomation : MonoBehaviour
 
         if (!File.Exists(winrarPath))
         {
+            UnityEngine.Debug.LogError("WinRAR не найден по указанному пути.");
             return;
         }
 
@@ -54,5 +83,7 @@ public class BuildAutomation : MonoBehaviour
         {
             rarProcess.WaitForExit();
         }
+
+        UnityEngine.Debug.Log("Build archived successfully.");
     }
 }
