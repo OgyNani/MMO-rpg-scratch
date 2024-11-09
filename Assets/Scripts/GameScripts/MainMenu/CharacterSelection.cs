@@ -24,15 +24,6 @@ public class CharacterSelection : MonoBehaviour
 
         dummyAnimator.SetTrigger("Selected");
     }
-    public void GoToMainWorldFromCity1()
-    {
-        SceneTransitionManager.Instance.TransitionToScene("MainWorld", "City1ToMainWorld");
-    }
-
-    public void GoToCity1FromMainWorld()
-    {
-        SceneTransitionManager.Instance.TransitionToScene("World", "MainWorldToCity1");
-    }
 
     public void LoadScene(string sceneName)
     {

@@ -2,7 +2,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading;
 using UnityEditor;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class BuildAutomation : MonoBehaviour
@@ -15,10 +14,6 @@ public class BuildAutomation : MonoBehaviour
     {
         UnityEngine.Debug.Log("Starting automated build...");
 
-        // Принудительное сохранение всех сцен и ассетов
-        SaveAllScenesAndAssets();
-
-        // Удаление старого архива, если он существует
         if (File.Exists(archiveFilePath))
         {
             File.Delete(archiveFilePath);
@@ -26,16 +21,15 @@ public class BuildAutomation : MonoBehaviour
 
         string exePath = buildFolderPath + "/hopon.exe";
 
-        // Удаление старого исполняемого файла, если он существует
         if (File.Exists(exePath))
         {
             File.Delete(exePath);
         }
 
-        // Небольшая задержка перед билдом
         Thread.Sleep(500);
 
-        string[] scenes = { "Assets/Scenes/MainMenu.unity", "Assets/Scenes/World.unity", "Assets/Scenes/MainWorld.unity" };
+        // Получаем все сцены из Build Settings
+        string[] scenes = GetScenesFromBuildSettings();
 
         UnityEngine.Debug.Log("Building project...");
         BuildPipeline.BuildPlayer(scenes, exePath, BuildTarget.StandaloneWindows, BuildOptions.None);
@@ -46,20 +40,15 @@ public class BuildAutomation : MonoBehaviour
         UnityEngine.Debug.Log("Automated build completed successfully.");
     }
 
-    private static void SaveAllScenesAndAssets()
+    private static string[] GetScenesFromBuildSettings()
     {
-        // Сохраняем все сцены и ассеты
-        for (int i = 0; i < EditorSceneManager.sceneCount; i++)
+        int sceneCount = EditorBuildSettings.scenes.Length;
+        string[] scenes = new string[sceneCount];
+        for (int i = 0; i < sceneCount; i++)
         {
-            var scene = EditorSceneManager.GetSceneAt(i);
-            if (scene.isDirty)
-            {
-                EditorSceneManager.SaveScene(scene);
-            }
+            scenes[i] = EditorBuildSettings.scenes[i].path;
         }
-        AssetDatabase.SaveAssets();
-        AssetDatabase.Refresh();
-        UnityEngine.Debug.Log("All scenes and assets saved.");
+        return scenes;
     }
 
     private static void CreateArchive()
